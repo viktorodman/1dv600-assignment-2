@@ -26,7 +26,7 @@
 
 
 
-## Usecase Model
+## Usecase Diagram
 
 
 ![Alt text][logo]
