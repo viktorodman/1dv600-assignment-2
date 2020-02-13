@@ -2,10 +2,9 @@
 1. [Plan and Time Log](#plan-and-time-log)
 2. [Updated Use Case Diagram](#updated-use-case-diagram)
 3. [Fully Dressed "Play Game" Use Case](#fully-dressed-play-game-use-case)
-4. [Machine Diagrams for "Play Game"](#machine-diagrams-for-play-game)
-5. [State Machines](#state-machines)
-6. [Implementation](#implementation)
-7. [Class diagram](#class-diagram)
+4. [State Machine Diagram for "Play Game"](#state-machine-diagram-for-play-game)
+5. [Implementation](#implementation)
+6. [Class diagram](#class-diagram)
 
 ***
 
@@ -14,7 +13,7 @@
 |   :------ |   :----------:    |   :--------:  |   :--- |:---
 | **Make time estimations** | 2 hours | 2 hours | Make time estimations on the different tasks | Time wise I'm surprised that it went as expected. |
 | **Create Usecase** | 4 hours | 2 hours 30 minutes | To get visualization over what our system is supposed to do, who uses the system and what our system relies on upon.| Most of the time was spent figuring out how to write Usecases |
-| **Modeling Behavior** | 3 hours | TBA |   Create a Play Game State Machine | Insert Reflection |
+| **Modeling Behavior** | 3 hours | 6 hours |   Create a Play Game State Machine | Changed the diagram many times. At first, the diagram looked too much like a Sequence Diagram.   |
 | **Implement** | 4 hours | TBA | Create a basic menu flow, so that I can move according to the state machine | Insert Reflection |
 | **Modeling Structure** | 2 hours | TBA | Create class diagrams from the implementation | Insert Reflection | 
 
@@ -30,9 +29,9 @@
 
 ## Updated Use Case Diagram
 
-![Alt text][logo]
+![Alt text][UCDIAGRAM]
 
-[logo]: Project-Documentation/Images/Usecase-Model.png "Logo Title Text 2"
+[UCDIAGRAM]: Project-Documentation/Images/Usecase-Model.png "Logo Title Text 2"
 
 ***
 
@@ -79,11 +78,11 @@ Postcondition: The Player chooses to stop playing.
 
 ***
 
-## Machine Diagrams for Play Game
+## State Machine Diagram for Play Game
 
-***
+![Alt text][STATEMACHINE]
 
-## State Machines
+[STATEMACHINE]: Project-Documentation/Images/Play-Game-State-Machine.png "Logo Title Text 2"
 
 ***
 
