@@ -18,7 +18,15 @@
 | **Implement** | 4 hours | TBA | Create a basic menu flow, so that I can move according to the state machine | Insert Reflection |
 | **Modeling Structure** | 2 hours | TBA | Create class diagrams from the implementation | Insert Reflection | 
 
-*** 
+***
+
+### Results
+|   Total Estimated Time | Total Actual Time | 
+| :------:               | :-------:         |
+|   15 hours             | TBA
+
+
+***
 
 ## Updated Use Case Diagram
 
@@ -30,9 +38,11 @@
 
 ## Fully Dressed Play Game use case
 
-Precondition: The word theme has been chosen.
+### UC 2 Play Game
 
-Postcondition: The Game Win confirmation is displayed.
+Precondition: The Player wants to play the game.
+
+Postcondition: The Player chooses to stop playing.
 
 ##### Main scenario
 
@@ -42,7 +52,7 @@ Postcondition: The Game Win confirmation is displayed.
 4. The system replaces the placeholders to the letter(Goto step 3)
 5. The Player enters all the letters of the word without exceeding the number of allowed guesses.
 6. The system presents the Game win confirmation and two alternatives, Play Again and Quit Game.
-7. The Player chooses Quit Game(see Use Case 3).
+7. The Player chooses Quit Game.
 
 ##### Alternative scenarios
 
@@ -51,12 +61,21 @@ Postcondition: The Game Win confirmation is displayed.
 1. The system adds a part to the man getting hanged.
 2. Goto 3.
 
-5.1 The player does not enter all the letters without exceeding the number of allowed guesses.
-1. The system presents the Game lose confirmation and two alternatives, Play Again and Quit Game.
+3.2 The Player enters a letter that's already been entered.
+
+1. The System informs the player.
+2. Goto 3
+
+3.3 The Player chooses to stop playing
+
+1. The System exits the game.
+
+5.1 The player exceeds the number of allowed guesses.
+1. (See step 6)
 2. The player chooses Play Again(See 7.1)
 
 7.1 The Player chooses Play Again
-1. Goto 2
+1. Goto 1
 
 ***
 
