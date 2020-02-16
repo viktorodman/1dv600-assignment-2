@@ -26,5 +26,8 @@
   },
   "eslintConfig": {
     "extends": "@lnu"
+  },
+  "dependencies": {
+    "inquirer": "^7.0.4"
   }
 }
