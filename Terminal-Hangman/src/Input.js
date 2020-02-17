@@ -5,33 +5,40 @@ const inquirer = require('inquirer')
 class Input extends EvenEmitter {
   constructor () {
     super()
-    this._menuItems = {
+    this._questionList = {
       type: 'list',
-      message: 'Welcome To Terminal Hangman!',
-      name: 'menuitem',
-      choices: ['Play Game', 'Change Settings', 'Quit Game']
+      message: '',
+      name: '',
+      choices: [],
+      prefix: ''
     }
-    this._wordLists = {
-      type: 'list',
-      message: 'Choose A Word List',
-      name: 'wordlist',
-      choices: ['Word List 1', 'Word List 2']
+    this._confirmList = {
+      type: 'confirm',
+      name: 'confirmation',
+      message: '',
+      prefix: ''
     }
   }
 
-  async getMenuInput () {
+  async confirm (message, event) {
     try {
-      const answer = await inquirer.prompt([this._menuItems])
-      this.emit('menuchoice', answer.menuitem)
+      this._confirmList.message = message
+
+      const answer = await inquirer.prompt([this._confirmList])
+      this.emit(event, answer.confirmation)
     } catch (error) {
       console.error(error)
     }
   }
 
-  async chooseWordList () {
+  async listItems (message, name, choices, event) {
     try {
-      const answer = await inquirer.prompt([this._wordLists])
-      this.emit('wordlistchoice', answer.wordlist)
+      this._questionList.message = message
+      this._questionList.name = name
+      this._questionList.choices = choices
+
+      const answer = await inquirer.prompt([this._questionList])
+      this.emit(event, answer[name])
     } catch (error) {
       console.error(error)
     }

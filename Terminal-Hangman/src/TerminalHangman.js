@@ -1,31 +1,28 @@
 'use strict'
 
-const Input = require('./Input')
 const Game = require('./Game')
+const Menu = require('./Menu')
 
 class TerminalHangman {
   constructor () {
-    this._input = new Input()
-    this._test = undefined
+    this._menu = new Menu()
   }
 
   init () {
-    this._input.on('menuchoice', (menuItem) => {
-      console.clear()
-      switch (menuItem) {
-        case 'Play Game': this._launchGame()
-          break
-        case 'Change Settings': console.log('Show settings')
-          break
-        case 'Quit Game': console.log('Exit the game')
-      }
+    this._menu.on('startgame', () => {
+      this._launchGame()
+      this._menu.removeAllListeners('startgame')
     })
-    this._input.getMenuInput()
+    this._menu.listMenuItems()
   }
 
   _launchGame () {
     const game = new Game()
-    game.startGame()
+    game.on('exittomenu', () => {
+      this.init()
+      game.removeAllListeners('exittomenu')
+    })
+    game.init()
   }
 }
 
