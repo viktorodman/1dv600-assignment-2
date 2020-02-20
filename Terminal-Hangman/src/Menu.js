@@ -15,6 +15,7 @@ class Menu extends EvenEmitter {
   listMenuItems () {
     this._input.on(this._menuEvent, (menuItem) => {
       console.clear()
+      this._input.removeAllListeners(this._menuEvent)
       switch (menuItem) {
         case 'Play Game': this.emit('startgame')
           break
@@ -22,8 +23,6 @@ class Menu extends EvenEmitter {
           break
         case 'Quit Game': this.quitGame()
       }
-
-      this._input.removeAllListeners(this._menuEvent)
     })
 
     this._input.listItems('Welcome To Terminal Hangman!', 'menuitem', this._menuItems, this._menuEvent)
@@ -32,12 +31,12 @@ class Menu extends EvenEmitter {
   quitGame () {
     this._input.on(this._exitEvent, (confirmation) => {
       console.clear()
+      this._input.removeAllListeners(this._exitEvent)
       if (confirmation) {
         console.log('exiting game')
       } else {
         this.listMenuItems()
       }
-      this._input.removeAllListeners(this._exitEvent)
     })
     this._input.confirm('Are you sure you want to quit?', this._exitEvent)
   }

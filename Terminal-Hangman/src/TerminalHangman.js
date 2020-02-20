@@ -10,8 +10,8 @@ class TerminalHangman {
 
   init () {
     this._menu.on('startgame', () => {
-      this._launchGame()
       this._menu.removeAllListeners('startgame')
+      this._launchGame()
     })
     this._menu.listMenuItems()
   }
