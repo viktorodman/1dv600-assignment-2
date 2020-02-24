@@ -1,44 +1,39 @@
 'use strict'
 
-const Input = require('./Input')
+const GameIO = require('./GameIO')
 const EvenEmitter = require('events')
 
+/**
+ * Represents a menu.
+ *
+ * @class Menu
+ * @augments {EvenEmitter}
+ */
 class Menu extends EvenEmitter {
+  /**
+   * Creates an instance of Menu.
+   *
+   * @memberof Menu
+   */
   constructor () {
     super()
-    this._input = new Input()
+    this._gameIO = new GameIO()
     this._menuItems = ['Play Game', 'Change Settings', 'Quit Game']
     this._menuEvent = 'menuchoice'
-    this._exitEvent = 'exitconfirmation'
   }
 
+  /**
+   * Prompts a lists of the menu items.
+   *
+   * @memberof Menu
+   */
   listMenuItems () {
-    this._input.on(this._menuEvent, (menuItem) => {
+    this._gameIO.on(this._menuEvent, (menuItem) => {
       console.clear()
-      this._input.removeAllListeners(this._menuEvent)
-      switch (menuItem) {
-        case 'Play Game': this.emit('startgame')
-          break
-        case 'Change Settings': console.log('Show settings')
-          break
-        case 'Quit Game': this.quitGame()
-      }
+      this._gameIO.removeAllListeners(this._menuEvent)
+      this.emit('menuitemchosen', menuItem)
     })
-
-    this._input.listItems('Welcome To Terminal Hangman!', 'menuitem', this._menuItems, this._menuEvent)
-  }
-
-  quitGame () {
-    this._input.on(this._exitEvent, (confirmation) => {
-      console.clear()
-      this._input.removeAllListeners(this._exitEvent)
-      if (confirmation) {
-        console.log('exiting game')
-      } else {
-        this.listMenuItems()
-      }
-    })
-    this._input.confirm('Are you sure you want to quit?', this._exitEvent)
+    this._gameIO.listItems('Welcome To Terminal Hangman!', 'menuitem', this._menuItems, this._menuEvent)
   }
 }
 

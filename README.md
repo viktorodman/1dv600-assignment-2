@@ -3,7 +3,6 @@
 2. [Updated Use Case Diagram](#updated-use-case-diagram)
 3. [Fully Dressed "Play Game" Use Case](#fully-dressed-play-game-use-case)
 4. [State Machine Diagram for "Play Game"](#state-machine-diagram-for-play-game)
-5. [Implementation](#implementation)
 6. [Class diagram](#class-diagram)
 
 ***
@@ -15,7 +14,7 @@
 | **Create Usecase** | 4 hours | 2 hours 30 minutes | To get visualization over what our system is supposed to do, who uses the system and what our system relies on upon.| Most of the time was spent figuring out how to write Usecases |
 | **Modeling Behavior** | 3 hours | 6 hours |   Create a Play Game State Machine | Changed the diagram many times. At first, the diagram looked too much like a Sequence Diagram.   |
 | **Implement** | 4 hours | 5 hours | Create a basic menu flow, so that I can move according to the state machine | Figuring out how the different modules that I used work took longer than expected. |
-| **Modeling Structure** | 2 hours | TBA | Create class diagrams from the implementation | Insert Reflection | 
+| **Modeling Structure** | 2 hours | 1 hour | Create class diagrams from the implementation | Made a simple class diagram. | 
 
 ***
 
@@ -31,7 +30,7 @@
 
 ![Alt text][UCDIAGRAM]
 
-[UCDIAGRAM]: Project-Documentation/Images/Usecase-Model.png "Logo Title Text 2"
+[UCDIAGRAM]: Project-Documentation/Images/Usecase-Model.png "A Use Case Diagram"
 
 ***
 
@@ -82,12 +81,13 @@ Postcondition: The Player chooses to stop playing.
 
 ![Alt text][STATEMACHINE]
 
-[STATEMACHINE]: Project-Documentation/Images/Play-Game-State-Machine.png "Logo Title Text 2"
+[STATEMACHINE]: Project-Documentation/Images/Play-Game-State-Machine.png "A State Diagram"
 
 ***
 
-## Implementation
-
-***
 
 ## Class diagram
+
+![Alt text][CLASSDIAGRAM]
+
+[CLASSDIAGRAM]: Project-Documentation/Images/Class-Diagram.png "A Class Diagram"
