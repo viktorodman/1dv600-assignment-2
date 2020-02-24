@@ -1,3 +1,5 @@
+### [How to install the application](Terminal-Hangman/README.md)
+
 # Assignment 2
 1. [Plan and Time Log](#plan-and-time-log)
 2. [Updated Use Case Diagram](#updated-use-case-diagram)
@@ -13,7 +15,7 @@
 | **Make time estimations** | 2 hours | 2 hours | Make time estimations on the different tasks | Time wise I'm surprised that it went as expected. |
 | **Create Usecase** | 4 hours | 2 hours 30 minutes | To get visualization over what our system is supposed to do, who uses the system and what our system relies on upon.| Most of the time was spent figuring out how to write Usecases |
 | **Modeling Behavior** | 3 hours | 6 hours |   Create a Play Game State Machine | Changed the diagram many times. At first, the diagram looked too much like a Sequence Diagram.   |
-| **Implement** | 4 hours | 5 hours | Create a basic menu flow, so that I can move according to the state machine | Figuring out how the different modules that I used work took longer than expected. |
+| **Implement** | 4 hours | 6 hours | Create a basic menu flow, so that I can move according to the state machine | Figuring out how the different modules that I used work took longer than expected. |
 | **Modeling Structure** | 2 hours | 1 hour | Create class diagrams from the implementation | Made a simple class diagram. | 
 
 ***
@@ -21,7 +23,7 @@
 ### Results
 |   Total Estimated Time | Total Actual Time | 
 | :------:               | :-------:         |
-|   15 hours             | TBA
+|   15 hours             | 17 hours and 30 minutes |
 
 
 ***
