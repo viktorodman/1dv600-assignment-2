@@ -5,7 +5,7 @@
 2. [Updated Use Case Diagram](#updated-use-case-diagram)
 3. [Fully Dressed "Play Game" Use Case](#fully-dressed-play-game-use-case)
 4. [State Machine Diagram for "Play Game"](#state-machine-diagram-for-play-game)
-6. [Class diagram](#class-diagram)
+5. [Class diagram](#class-diagram)
 
 ***
 
