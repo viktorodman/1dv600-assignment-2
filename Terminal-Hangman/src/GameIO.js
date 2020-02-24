@@ -32,7 +32,7 @@ class GameIO extends EvenEmitter {
   }
 
   /**
-   *  Prompts the user to confirm a question.
+   * Prompts the user to confirm a question.
    *
    * @param {string} message A question.
    * @param {string} event The name of an event.
